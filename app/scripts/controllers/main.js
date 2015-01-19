@@ -8,18 +8,23 @@
  * Controller of the innPalWebApp
  */
 angular.module('innPalWebApp')
-  .controller('MainCtrl', function ($scope, $modal) {
-  	$scope.signup = function(){
-  		 var modalInstance = $modal.open({
-		     templateUrl: '/views/signup.html',
-		     controller: 'SignupCtrl'
-		});
+  .controller('MainCtrl', function ($scope, $modal, $interval) {
+
+  	var init = function(){
+  		resizeHomeBg();
   	}
-  	$scope.login = function(){
-  		 var modalInstance = $modal.open({
-		     templateUrl: '/views/login.html',
-		     controller: 'LoginCtrl'
-		});
+
+  	var resizeHomeBg = function(){
+  		$interval(function(){
+
+  			var homeHead = document.getElementById('homeHeader');
+  			if(homeHead){
+  				homeHead.style['height'] = window.innerHeight + 'px';
+  			}
+  			
+  		}, 20)
   	}
-      
+
+  	
+      init();
   });

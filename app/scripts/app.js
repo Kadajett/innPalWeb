@@ -17,7 +17,9 @@ angular
     'ngSanitize',
     'ngTouch',
     'ui.bootstrap',
-    'LocalStorageModule'
+    'LocalStorageModule',
+    'angulartics', 
+    'angulartics.google.analytics'
   ])
   .config(function ($routeProvider, $httpProvider) {
 
@@ -51,11 +53,11 @@ angular
         templateUrl: 'views/profile.html',
         controller: 'ProfileCtrl'
       })
-      .when('/whyHotel', {
+      .when('/whyhotel', {
         templateUrl: 'views/whyhotel.html',
         controller: 'WhyhotelCtrl'
       })
-      .when('/whyUser', {
+      .when('/whyuser', {
         templateUrl: 'views/whyuser.html',
         controller: 'WhyuserCtrl'
       })

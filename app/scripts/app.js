@@ -51,6 +51,14 @@ angular
         templateUrl: 'views/profile.html',
         controller: 'ProfileCtrl'
       })
+      .when('/whyHotel', {
+        templateUrl: 'views/whyhotel.html',
+        controller: 'WhyhotelCtrl'
+      })
+      .when('/whyUser', {
+        templateUrl: 'views/whyuser.html',
+        controller: 'WhyuserCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

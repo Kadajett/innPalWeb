@@ -3,7 +3,10 @@ body {
 
 }
 
-
+.websiteLogo{
+  width: 100px;
+height: auto;
+}
 
 #headerBg{
 
